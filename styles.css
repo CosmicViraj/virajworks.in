@@ -152,38 +152,6 @@ section {
         width: 100%; /* Full width for contact items on smaller screens */
     }
 }
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    padding: 10px 20px; /* Add padding to make them look like buttons */
-    background: #2575fc; /* Button background color */
-    border-radius: 5px; /* Rounded corners */
-    border: 2px solid transparent; /* For a smoother focus effect */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover and click effects */
-}
-
-nav ul li a:hover {
-    background: #1a5bbf; /* Darker background on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-nav ul li a:active {
-    background: #143d8f; /* Even darker background on click */
-    transform: scale(0.95); /* Shrink slightly on click */
-}
-
-nav ul {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav ul li {
-    list-style: none;
-}
 form {
     max-width: 500px;
     margin: 20px auto;
