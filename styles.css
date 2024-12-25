@@ -5,7 +5,6 @@ body {
     background: #f4f4f9;
     color: #333;
 }
-
 header {
     text-align: center;
     background: linear-gradient(90deg, #6a11cb, #2575fc);
@@ -15,13 +14,12 @@ header {
 
 .profile-pic {
     border-radius: 50%; /* Makes the image circular */
-    width: 150px;
-    height: 150px; /* Ensure equal dimensions for a perfect circle */
+    width: 150px; /* Adjust as needed */
+    height: 150px; /* Ensure it's equal to width for a perfect circle */
     margin-bottom: 15px;
     border: 3px solid white;
-    object-fit: cover; /* Prevents distortion */
+    object-fit: cover; /* Ensures the image doesn't distort */
 }
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -29,29 +27,32 @@ nav ul {
     justify-content: center;
     gap: 20px;
 }
-
 nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: 700;
 }
-
 main {
     padding: 20px;
 }
-
 section {
     margin-bottom: 40px;
 }
-
-#about, #projects, #contact {
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: center; /* Applies specifically to #contact */
+#about {
+    padding: 20px; /* Add space inside the section */
+    background: #ffffff; /* Optional: Add a background color for contrast */
+    border-radius: 8px; /* Optional: Rounded corners for a polished look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+    margin: 20px auto; /* Center the section with auto margins */
+    max-width: 800px; /* Optional: Limit the width for better readability */
+}
+#projects {
+    padding: 20px; /* Add space inside the section */
+    background: #ffffff; /* Optional: Add a white background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the section with auto margins */
+    max-width: 800px; /* Optional: Limit the width for readability */
 }
 
 .project-list {
@@ -59,7 +60,7 @@ section {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    padding: 10px;
+    padding: 10px; /* Add some spacing around the project cards */
 }
 
 .project {
@@ -67,7 +68,7 @@ section {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
-    width: calc(33.33% - 20px); /* 3 cards per row */
+    width: calc(33.33% - 20px); /* Adjust for 3 cards per row with spacing */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -79,13 +80,34 @@ section {
 
 .project h3 {
     margin-top: 0;
-    color: #2575fc;
+    color: #2575fc; /* Highlighted title */
 }
 
 .project a {
     text-decoration: none;
     color: #2575fc;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: 100%; /* 1 card per row on extra-small screens */
+    }
+}
+#contact {
+    padding: 20px; /* Add space inside the section */
+    background: #ffffff; /* Optional: Add a white background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the section with auto margins */
+    max-width: 800px; /* Limit the width for better readability */
+    text-align: center; /* Center align content */
 }
 
 .contact-links {
@@ -125,6 +147,43 @@ section {
     font-size: 1.5em; /* Larger icon size */
 }
 
+@media (max-width: 480px) {
+    .contact-links li {
+        width: 100%; /* Full width for contact items on smaller screens */
+    }
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 10px 20px; /* Add padding to make them look like buttons */
+    background: #2575fc; /* Button background color */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid transparent; /* For a smoother focus effect */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover and click effects */
+}
+
+nav ul li a:hover {
+    background: #1a5bbf; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+nav ul li a:active {
+    background: #143d8f; /* Even darker background on click */
+    transform: scale(0.95); /* Shrink slightly on click */
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style: none;
+}
 form {
     max-width: 500px;
     margin: 20px auto;
@@ -159,20 +218,4 @@ form button {
 
 form button:hover {
     background: #0056b3;
-}
-
-@media (max-width: 768px) {
-    .project {
-        width: calc(50% - 20px); /* 2 cards per row on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .project {
-        width: 100%; /* 1 card per row on extra-small screens */
-    }
-
-    .contact-links li {
-        width: 100%; /* Full width for contact items on smaller screens */
-    }
 }
