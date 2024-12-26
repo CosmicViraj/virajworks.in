@@ -217,7 +217,7 @@ form button {
 }
 
 form button:hover {
-    background: #0056b3;
+    background: #04356a;
 }
 
 
@@ -239,7 +239,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #2575fc; /* Blue background on hover */
+    background-color: #004cd0; /* Blue background on hover */
     color: white; /* White text color on hover */
 }
 
@@ -247,6 +247,3 @@ nav ul li a:active {
     transform: translateY(2px); /* Slight button press effect */
 }
 
-#about:active, #projects:active, #contact:active {
-    background-color: #28a745; /* Change active link background color */
-}
