@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
             link: "https://github.com/CosmicViraj/C-Honeypot"
         },
         {
+            name: "YouTube-Clone",
+            description: "A feature-rich YouTube clone built using Kotlin and Android, designed to provide a video-sharing and streaming platform with an intuitive user interface. This project showcases modern Android development practices and implements a scalable architecture.",
+            link: "https://github.com/CosmicViraj/YouTube-Clone"
+        },
+        {
             name: "TCP-Chat-Application",
             description: "A TCP Chat Application for real-time communication between users over TCP.",
             link: "https://github.com/CosmicViraj/TCP-Chat-Application"
