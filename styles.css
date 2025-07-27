@@ -1,123 +1,60 @@
-/* Updated styles.css for Viraj's Portfolio */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 body {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #ffffff;
-  line-height: 1.6;
-  min-height: 100vh;
-  padding: 20px;
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f2f2f2;
+  color: #333;
 }
 
 header {
-  text-align: center;
-  padding: 20px 0;
-}
-
-header img {
-  width: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-nav {
-  text-align: center;
-  margin-bottom: 30px;
+  background: #1e1e2f;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav a {
+  margin-left: 20px;
+  color: white;
   text-decoration: none;
-  color: #ffffff;
-  background-color: #1f4068;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #29a19c;
+  text-decoration: underline;
 }
 
-section {
-  max-width: 900px;
-  margin: auto;
-  margin-bottom: 40px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
 
-h1, h2 {
-  color: #00d9ff;
-  text-align: center;
-  margin-bottom: 20px;
+.project {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.project-card {
-  background-color: #1a1a2e;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 10px rgba(0, 217, 255, 0.1);
+.project h3 {
+  margin-top: 0;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 217, 255, 0.2);
-}
-
-.project-card h3 {
-  color: #00d9ff;
-  margin-bottom: 10px;
-}
-
-.project-card p {
-  color: #e0f7fa;
-}
-
-form label {
-  display: block;
+.btn {
+  display: inline-block;
   margin-top: 10px;
-  color: #ffffff;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: none;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
-}
-
-form button {
-  margin-top: 15px;
-  background-color: #29a19c;
+  padding: 10px 20px;
+  background: #0066cc;
   color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #207d79;
+  text-decoration: none;
+  border-radius: 6px;
 }
 
 footer {
   text-align: center;
-  margin-top: 40px;
-  color: #aaa;
+  padding: 1rem;
+  background: #1e1e2f;
+  color: white;
 }
