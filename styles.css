@@ -1,9 +1,24 @@
-/* Global Styles */
-body {
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
   font-family: "Segoe UI", sans-serif;
   background: #f2f2f2;
   color: #333;
+  line-height: 1.6;
 }
 
 .container {
@@ -12,11 +27,17 @@ body {
   padding: 0 1rem;
 }
 
-/* Header */
+/* ===========================
+   HEADER
+=========================== */
+
 header {
   background: #1e1e2f;
   color: white;
   padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header .container {
@@ -25,79 +46,107 @@ header .container {
   align-items: center;
 }
 
+header h1 {
+  font-size: 1.8rem;
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  padding: 0;
-  margin: 0;
+  gap: 20px;
 }
 
 nav li {
-  margin-left: 20px;
+  margin: 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  transition: 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-  text-decoration: underline;
+  color: #4da6ff;
 }
 
-/* Home Section */
+/* ===========================
+   HOME SECTION
+=========================== */
+
 .home {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
   padding: 2rem 0;
 }
 
 .intro-content {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-img img {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .text-section {
-  flex: 1 1 500px;
+  flex: 2;
+  min-width: 300px;
 }
 
 .text-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 10px;
 }
 
 .text-section h3 {
-  font-size: 1.2rem;
   color: #666;
-  margin-top: 0;
-}
-
-.text-section p {
-  line-height: 1.6;
-  margin-top: 1rem;
+  margin-bottom: 15px;
 }
 
 .highlight {
   color: #0066cc;
 }
 
-/* Buttons */
+.text-section p {
+  max-width: 700px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
 .cta-buttons {
-  margin-top: 1.5rem;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .btn,
-.btn-outline,
-.btn-secondary {
-  padding: 10px 20px;
-  margin-right: 10px;
-  border-radius: 6px;
+.btn-secondary,
+.btn-outline {
+  padding: 12px 20px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 500;
-  transition: background 0.3s, color 0.3s;
+  transition: 0.3s;
+  font-weight: 600;
 }
 
 .btn {
@@ -111,16 +160,15 @@ nav a.active {
 
 .btn-secondary {
   background: #444;
-  color: #fff;
+  color: white;
 }
 
 .btn-secondary:hover {
-  background: #333;
+  background: #222;
 }
 
 .btn-outline {
   border: 2px solid #0066cc;
-  background: transparent;
   color: #0066cc;
 }
 
@@ -129,81 +177,113 @@ nav a.active {
   color: white;
 }
 
-/* Social Icons */
+/* ===========================
+   SOCIAL ICONS
+=========================== */
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  align-items: center;
+}
+
 .social-icons img {
-  width: 28px;
-  height: 28px;
-  filter: grayscale(100%);
-  transition: transform 0.3s, filter 0.3s;
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
 }
 
 .social-icons img:hover {
-  transform: scale(1.1);
-  filter: grayscale(0%);
+  transform: scale(1.15);
 }
 
+/* ===========================
+   PROJECTS
+=========================== */
 
-/* Profile Image */
-.profile-img img {
-  width: 280px;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-}
-
-/* Projects Grid (if used elsewhere) */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
 }
 
 .project {
   background: white;
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 12px;
+  transition: 0.3s;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.project h3 {
-  margin-top: 0;
+.project:hover {
+  transform: translateY(-5px);
 }
 
-/* Footer */
+.project h3 {
+  margin-bottom: 10px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
 footer {
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
   background: #1e1e2f;
   color: white;
   margin-top: 2rem;
 }
 
+/* ===========================
+   TABLET VIEW
+=========================== */
 
-/* ============================
-   📱 Responsive Styles
-   ============================ */
+@media (max-width: 1024px) {
+
+  .intro-content {
+    gap: 2rem;
+  }
+
+  .profile-img img {
+    width: 240px;
+  }
+
+  .text-section h2 {
+    font-size: 2.3rem;
+  }
+}
+
+/* ===========================
+   MOBILE VIEW
+=========================== */
+
 @media (max-width: 768px) {
+
   header .container {
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
   }
 
   nav ul {
     flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  nav li {
-    margin-left: 0;
-    margin-bottom: 10px;
+    align-items: center;
+    margin-top: 15px;
   }
 
   .intro-content {
     flex-direction: column;
-    align-items: center;
     text-align: center;
+  }
+
+  .profile-img img {
+    width: 200px;
+  }
+
+  .text-section {
+    min-width: auto;
   }
 
   .text-section h2 {
@@ -214,39 +294,49 @@ footer {
     font-size: 1rem;
   }
 
-  .text-section {
-    flex: 1 1 100%;
-    padding: 0 1rem;
-  }
-
   .cta-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
   }
 
   .cta-buttons a {
-    margin-bottom: 10px;
-    width: 90%;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
   }
 
   .social-icons {
-    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .social-icons img {
-    margin: 6px;
-  }
-
-  .profile-img img {
-    width: 200px;
   }
 
   .project-list {
     grid-template-columns: 1fr;
-    padding: 1rem;
+  }
+}
+
+/* ===========================
+   SMALL MOBILE VIEW
+=========================== */
+
+@media (max-width: 480px) {
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .text-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .text-section p {
+    font-size: 0.95rem;
+  }
+
+  .profile-img img {
+    width: 170px;
+  }
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
   }
 }
