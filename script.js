@@ -18,35 +18,35 @@ document.addEventListener("DOMContentLoaded", function () {
     {
         name: "CyberScope",
         description: "SOC-style cybersecurity toolkit featuring Nmap scanning, CVE lookup, risk scoring, visual analytics, scan history, and PDF report generation.",
-        category: "Security",
+        category: "cyber-projects",
         link: "https://github.com/CosmicViraj/CyberScope"
     },
 
     {
         name: "Sentinel Cyber Portal",
         description: "AI-powered cyber incident reporting and threat intelligence portal with real-time threat monitoring and automated threat assessment.",
-        category: "Security",
+        category: "academic-projects",
         link: "https://github.com/CosmicViraj/sentinel-cyber-portal"
     },
 
     {
         name: "Honeypot (C)",
         description: "A honeypot written in C that tracks unauthorized access attempts and logs suspicious activities for security analysis.",
-        category: "Security",
+        category: "network-projects",
         link: "https://github.com/CosmicViraj/C-Honeypot"
     },
 
     {
         name: "TCP Chat Application",
         description: "Real-time client-server chat application using TCP sockets for reliable communication across a network.",
-        category: "Security",
+        category: "network-projects",
         link: "https://github.com/CosmicViraj/TCP-Chat-Application"
     },
 
     {
         name: "XOR File Encryption",
         description: "A lightweight file encryption and decryption tool demonstrating XOR-based cryptographic techniques.",
-        category: "Security",
+        category: "crypto-projects",
         link: "https://github.com/CosmicViraj/XOR-File-Encryption"
     }
 ];
